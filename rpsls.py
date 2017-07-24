@@ -23,16 +23,16 @@ def play_round(player_choice):
     print("Computer chooses", comp_choice, end="\n\n")
 
     if difference in [3, 4]:
-        outcome = comp_choice + " beats " + player_choice.capitalize() + ". Computer wins."
+        outcome = "{0} beats {1}. Computer wins.".format(comp_choice, player_choice.capitalize())
         computer_score += 1
     elif difference in [1, 2]:
-        outcome = player_choice.capitalize() + " beats " + comp_choice + ". You win!"
+        outcome = "{0} beats {1}. You win!".format(player_choice.capitalize(), comp_choice)
         player_score += 1
     else:
         outcome = "It's a tie!"
         tie_score += 1
 
-    game_score = "Player: " + str(player_score) + " | Computer: " + str(computer_score) + " | Ties: " + str(tie_score)
+    game_score = "Player: {!s} | Computer: {!s} | Ties: {!s}".format(player_score, computer_score, tie_score)
 
     print(outcome, end="\n\n")
     print(game_score, end="\n\n")
@@ -55,7 +55,7 @@ if __name__ == "__main__":
             print("I'm sorry, that doesn't seem to be a valid choice.")
 
         continue_answer = input("Continue playing? ")
-        
+
         if continue_answer not in ['y', 'yes', 'Yes', 'YES']:
             game_in_progress = False
             print("Thanks for playing!")
