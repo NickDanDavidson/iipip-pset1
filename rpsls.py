@@ -47,7 +47,7 @@ def main():
 
     while game_in_progress:
         player_choice = input("What is your choice? ")
-        player_choice = str.lower(player_choice)
+        player_choice = player_choice.lower()
 
         print()
 
