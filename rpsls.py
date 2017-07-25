@@ -1,10 +1,6 @@
 import random
 
 CHOICES = ["rock", "spock", "paper", "lizard", "scissors"]
-player_score = 0
-computer_score = 0
-tie_score = 0
-game_in_progress = True
 
 def play_round(player_choice):
     """ Play a game of Rock/Paper/Scissors/Lizard/Spock with input from a user at the command line. """
@@ -37,8 +33,14 @@ def play_round(player_choice):
     print(outcome, end="\n\n")
     print(game_score, end="\n\n")
 
+def main():
+    """ Set up and tear down game logic. """
 
-if __name__ == "__main__":
+    global player_score, computer_score, tie_score, game_in_progress
+    game_in_progress = True
+    player_score = 0
+    computer_score = 0
+    tie_score = 0
 
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock: an extension of the classic Rock-Paper-Scissors.", end="\n\n")
     print("You're playing against the computer.")
@@ -59,3 +61,6 @@ if __name__ == "__main__":
         if continue_answer not in ['y', 'yes', 'Yes', 'YES']:
             game_in_progress = False
             print("Thanks for playing!")
+
+if __name__ == "__main__":
+    main()
