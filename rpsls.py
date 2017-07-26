@@ -1,26 +1,27 @@
 from rpslsgame import Game
-from funcs import play_round
-
-CHOICES = ["rock", "spock", "paper", "lizard", "scissors"]
 
 def main():
-    """ Set up and tear down game logic. """
+    """
+    Start a new game of Rock-Paper-Scissors-Lizard-Spock. Control the game logic. After each round, prompt the user if they want to continue playing. If they do, begin another round; if not, end the game.
+    """
 
     newGame = Game()
-    newGame.welcome()
 
     while newGame.in_progress:
-        player_choice = input("What is your choice? ").lower()
-        print()
+        newGame.get_player_choice()
 
-        if player_choice in CHOICES:
-            play_round(player_choice, CHOICES, newGame)
+        if newGame.player_choice in newGame.choices:
+            newGame.get_computer_choice()
+            newGame.compare_choices()
+            newGame.calculate_result()
+            newGame.show_scoreboard()
         else:
             print("I'm sorry, that doesn't seem to be a valid choice.")
+            print("You can choose from", newGame.choices)
 
-        continue_answer = input("Continue playing? ")
+        continue_playing = input("Continue playing? [y/n] ")
 
-        if continue_answer not in ['y', 'yes', 'Yes', 'YES']:
+        if continue_playing not in ['y', 'yes', 'Yes', 'YES']:
             newGame.finish_game()
 
 if __name__ == "__main__":
