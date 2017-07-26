@@ -1,4 +1,5 @@
 from rpslsgame import Game
+import time
 
 def main():
     """
@@ -12,14 +13,18 @@ def main():
 
         if newGame.player_choice in newGame.choices:
             newGame.get_computer_choice()
+            time.sleep(1)
             newGame.compare_choices()
+            time.sleep(0.5)
             newGame.calculate_result()
+            time.sleep(0.5)
             newGame.show_scoreboard()
         else:
             print("I'm sorry, that doesn't seem to be a valid choice.")
-            print("You can choose from", newGame.choices)
+            newGame.display_choices()
 
         continue_playing = input("Continue playing? [y/n] ")
+        print("-" * 40)
 
         if continue_playing not in ['y', 'yes', 'Yes', 'YES']:
             newGame.finish_game()

@@ -27,6 +27,7 @@ class Game:
         self.player_choice = ""
         self.computer_choice = ""
         self.welcome_player()
+        self.display_choices()
 
 
     def welcome_player(self):
@@ -36,6 +37,11 @@ class Game:
 
         print(self.welcome_message, end="\n\n")
         print(self.game_notices)
+
+
+    def display_choices(self):
+        choice_string = ", ".join(self.choices)
+        print("You may choose from", choice_string)
 
 
     def get_player_choice(self):
