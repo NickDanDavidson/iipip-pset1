@@ -58,7 +58,7 @@ class Game:
         Assign the computer a random selection from the available choices.
         """
 
-        self.computer_choice = self.choices[random.randrange(0, 5)]
+        self.computer_choice = random.choice(self.choices)
 
 
     def player_wins(self):
