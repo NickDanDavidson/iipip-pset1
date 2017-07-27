@@ -1,4 +1,4 @@
-from rpslsgame import Game
+from gameclass import RPSLSGame
 import time
 
 def main():
@@ -6,7 +6,7 @@ def main():
     Start a new game of Rock-Paper-Scissors-Lizard-Spock. Control the game logic. After each round, prompt the user if they want to continue playing. If they do, begin another round; if not, end the game.
     """
 
-    newGame = Game()
+    newGame = RPSLSGame()
 
     while newGame.in_progress:
         newGame.get_player_choice()

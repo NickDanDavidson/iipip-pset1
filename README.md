@@ -2,9 +2,12 @@
 ## Rock-Paper-Scissors-Lizard-Spock
 
 Submitted Fall 2012.
-Command-line implementation of the game Rock-Paper-Scissors-Lizard-Spock.
-Originally, it was only a simulation of the game; now it accepts user input, compares against a randomized computer choice, and keeps track of the score.
+This is my very first programming project, submitted to Rice University's online offering of its Introduction to Interactive Programming in Python (IIPIP).
+
+This is a command-line implementation of the game Rock-Paper-Scissors-Lizard-Spock.
+
+Originally, it was only a simulation of the game; it has been update to accept user input, compare against a randomized computer choice, and keep track of the score.
 
 ### Running the game
 - Make sure you have Python 3 installed - type `python -V` at the command line to see if and which version you have installed.
-- Run the program using `python -m rpsls` and follow the prompts.
+- Run the program using `python -m rpsls-game` and follow the prompts.

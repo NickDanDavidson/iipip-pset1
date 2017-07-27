@@ -1,6 +1,6 @@
 import random
 
-class Game:
+class RPSLSGame:
     """
     Hold Rock-Paper-Scissors-Lizard-Spock game state and utility functions.
 
