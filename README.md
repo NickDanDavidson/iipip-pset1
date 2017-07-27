@@ -1,8 +1,7 @@
 # Project 1 - Intro to Interactive Programming in Python
 ## Rock-Paper-Scissors-Lizard-Spock
 
-Submitted Fall 2012.
-This is my very first programming project, submitted to Rice University's online offering of its Introduction to Interactive Programming in Python (IIPIP).
+This was my very first programming project, submitted to Rice University's online offering of its Introduction to Interactive Programming in Python (IIPIP).
 
 This is a command-line implementation of the game Rock-Paper-Scissors-Lizard-Spock.
 
